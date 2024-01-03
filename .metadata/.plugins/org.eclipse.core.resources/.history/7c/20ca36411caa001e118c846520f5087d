@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://java.sun.com/jsf/html"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:sql_rt="http://java.sun.com/jstl/sql_rt">
+
+<p:head>
+	<title>Example Of The Welcome Page : </title>
+</p:head>      
+
+<p:body>
+	<h2>This is The Welcome Page After CLicking On The Given Link </h2>
+			<rich:calendar></rich:calendar>
+			
+</p:body>
+      
+</html>

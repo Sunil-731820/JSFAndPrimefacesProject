@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://java.sun.com/jsf/html"
+	xmlns:sql_rt="http://java.sun.com/jstl/sql_rt"  
+    xmlns:k="http://primefaces.org/ui">
+<p:head>
+	<title>Ajax Basic Example</title>
+</p:head>
+<p:body>
+	<h2>Basic Ajax Example</h2>
+
+	<p:form>
+		<p:panelGrid columns="4" cellpadding="5">
+			<p:outputLabel for="name" value="Name:" style="font-weight:bold" />
+			<p:inputText id="name" value="#{user.name}"
+				requiredMessage="Name Should Not Be Empty" />
+			<p:commandButton value="Submit" update="display" icon="ui-icon-check" />
+			<p:outputText id="display" value="#{user.name}" />
+			<p:message for="display">Name Should Not be Empty</p:message>
+		</p:panelGrid>
+		
+	</p:form>
+	
+	<h3>Prime Faces Steps </h3>
+	<k:steps activeIndex="3">
+		<k:menuitem value="personal Details "></k:menuitem>
+	</k:steps>
+
+
+
+</p:body>
+</html>

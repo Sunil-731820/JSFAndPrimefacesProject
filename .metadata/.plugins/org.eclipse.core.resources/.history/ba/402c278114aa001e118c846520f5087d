@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://java.sun.com/jsf/html"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:sql_rt="http://java.sun.com/jstl/sql_rt">
+
+<p:head>
+	<title>EXample Of The Rich faces</title>
+</p:head>
+
+<p:body>
+	<h2>Example Of The Rich faces</h2>
+	<p:link outcome="welcomeRichfaces.xhtml">Go To Next page</p:link>
+
+	<rich:panel header="Welcome to Richfaces">  
+RichFaces is an advanced UI component framework for easily integrating Ajax capabilities into business   
+applications using JSF.  Check out the links below to lear more about using RichFaces in your application.  
+<ul>
+			<li><p:outputLink value="http://richfaces.org">Richfaces Project Home Page  
+</p:outputLink></li>
+	</ul>		
+	</rich:panel>
+</p:body>
+
+</html>
