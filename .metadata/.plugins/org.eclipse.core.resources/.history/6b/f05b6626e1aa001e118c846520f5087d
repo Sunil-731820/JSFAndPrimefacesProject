@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:sql_rt="http://java.sun.com/jstl/sql_rt">
+
+<h:body>
+	<h:form>
+		<h:outputLabel for="username">User Name</h:outputLabel>
+		<h:inputText id="user-id" value="#{user.name}" required="true" requiredMessage="User Name Is Required"/>
+		<br />
+		<h:message for="user-id" style="red"/><br></br>
+		<h:outputLabel for="age">Date of Birth</h:outputLabel>
+		<h:inputText id="dob-id" value="#{user.dob}"
+			converterMessage="Please provide date of birth in dd/mm/yyyy format" required="true" requiredMessage="Date is Required">
+			<f:convertDateTime pattern="dd/mm/yyyy" />
+		</h:inputText><br />
+		<h:message for="dob-id" /><br></br>
+		
+		<h:commandButton action="response.xhtml" value="Submit" />
+	</h:form>
+</h:body>
+</html>

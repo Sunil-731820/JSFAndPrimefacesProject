@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:sql_rt="http://java.sun.com/jstl/sql_rt">
+
+<h:body>
+	<h:form target="successPage.xhtml">
+	Please ENter The name : 
+		<h:inputText id="name" value="#{dateValidation.name}" required="true" requiredMessage="name Should Not be Empty"/>
+		<h:message for="name" style="red" /><br></br>
+	Please Enter The Age : 
+		<h:inputText id="age" value="#{dateValidation.age}" required="true" requiredMessage="Age is Required"/>
+		<h:message for="age" /><br></br>
+	Please ENter the date : 
+		<h:inputText id="dateOfBirth" value="#{dateValidation.dateOfBirth}" required="true" requiredMessage="date Can not Be Blank ">
+			<f:convertDateTime pattern="yyyy-MM-dd" />
+		</h:inputText>
+		<h:message for="dateOfBirth" /><br></br>
+
+		<h:commandButton value="Submit" action="#{dateValidation.saveUser}" />
+	</h:form>
+
+
+</h:body>
+
+
+</html>

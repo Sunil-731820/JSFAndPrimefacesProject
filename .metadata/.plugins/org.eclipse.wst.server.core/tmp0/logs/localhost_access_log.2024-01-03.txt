@@ -147,3 +147,6 @@
 0:0:0:0:0:0:0:1 - - [03/Jan/2024:15:12:37 +0530] "GET /JSFAndPrimefacesProject/javax.faces.resource/theme.css.xhtml?ln=primefaces-aristo HTTP/1.1" 304 -
 127.0.0.1 - - [03/Jan/2024:15:18:28 +0530] "GET / HTTP/1.1" 404 751
 0:0:0:0:0:0:0:1 - - [03/Jan/2024:15:18:28 +0530] "GET /RichfacesProjectWithExample/firstExample.xhtml HTTP/1.1" 500 3479
+127.0.0.1 - - [03/Jan/2024:15:19:25 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [03/Jan/2024:15:19:25 +0530] "GET /RichfacesProjectWithExample/firstExample.xhtml HTTP/1.1" 404 801
+0:0:0:0:0:0:0:1 - - [03/Jan/2024:16:24:11 +0530] "GET /RichfacesProjectWithExample/firstExample.xhtml HTTP/1.1" 404 801

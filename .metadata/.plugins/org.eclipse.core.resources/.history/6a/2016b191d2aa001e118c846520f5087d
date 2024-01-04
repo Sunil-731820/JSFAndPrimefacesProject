@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:sql_rt="http://java.sun.com/jstl/sql_rt">
+
+<h:body>
+	<h2>JSF validate bean example</h2>
+	<h:form>
+		<h:panelGrid columns="3">
+
+			<h:outputLabel value="Name:" for="name" />
+			<h:inputText id="name" value="#{userBean.name}" required="true" requiredMessage="name Should Not Be Empty">
+				<f:validateRequired/>
+			</h:inputText>
+			
+			<h:message for="name" style="color:red" />
+
+			<h:outputLabel value="Email:" for="email" />
+			<h:inputText id="email" value="#{userBean.email}" required="true" requiredMessage="Email is Required">
+				<f:validateRequired/>
+			</h:inputText>
+			<h:message for="email" style="color:red" />
+
+		</h:panelGrid>
+		<h:commandButton value="submit" action="result" />
+		<h:outputText value="#{userBean.name}">Name</h:outputText>
+	</h:form>
+</h:body>
+
+</html>

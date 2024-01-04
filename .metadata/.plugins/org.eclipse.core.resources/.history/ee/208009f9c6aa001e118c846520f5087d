@@ -1,0 +1,58 @@
+package com.java.jsf.BeanValidation;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
+
+@ManagedBean
+
+public class UserBean {
+	private String username;
+	private String email;
+	private Integer age;
+	
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Integer getAge() {
+		return age;
+	}
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+	
+	public String saveUser() {
+        if (username == null || username.isEmpty()) {
+            addErrorMessage("username", "Username is required");
+            return null; // Stay on the same page
+        }
+
+        if (email == null || !email.contains("@")) {
+            addErrorMessage("email", "Invalid email format");
+            return null; // Stay on the same page
+        }
+
+        if (age == null || age < 18 || age > 120) {
+            addErrorMessage("age", "Age must be between 18 and 120");
+            return null; // Stay on the same page
+        }
+
+        // If validation passes, perform further actions
+        return "resultPage"; // Redirect to result page
+    }
+	
+	 private void addErrorMessage(String clientId, String message) {
+	        FacesContext.getCurrentInstance().addMessage(clientId, 
+	            new FacesMessage(FacesMessage.SEVERITY_ERROR, message, null));
+	    }
+
+}

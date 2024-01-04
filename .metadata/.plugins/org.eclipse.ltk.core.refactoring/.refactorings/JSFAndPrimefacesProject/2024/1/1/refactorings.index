@@ -1,2 +1,8 @@
 1704269792110	Move 'welcomeRichfaces.xhtml' to 'RichfacesFolder'
 1704275114662	Copy files
+1704346710186	Move 'response.xhtml' to 'JSFFolder'
+1704346724644	Move 'response.xhtml' to 'firstExample'
+1704346737863	Rename resource 'index.jsp'
+1704346743809	Delete element
+1704357671670	Move 'date1.xhtml' to 'dateValidation'
+1704357884994	Rename type 'UserBean'

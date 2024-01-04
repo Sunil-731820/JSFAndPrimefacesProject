@@ -1,0 +1,83 @@
+package com.java.jsf.dateValidation;
+
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+@ManagedBean
+public class DateValidation {
+    private String name;
+    private int age;
+    private Date dateOfBirth;
+
+
+    public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public String saveUser() {
+        if (name == null || name.trim().isEmpty()) {
+            addErrorMessage("name", "Name is required");
+            return null; // Stay on the same page
+        }
+
+        if (age <= 0 || age > 120) {
+            addErrorMessage("age", "Age must be between 1 and 120");
+            return null; // Stay on the same page
+        }
+
+        if (dateOfBirth == null || !isValidDateOfBirth(dateOfBirth)) {
+            addErrorMessage("dateOfBirth", "Invalid date format or date");
+            return null; // Stay on the same page
+        }
+
+        // If validation passes, perform further actions
+        return "successPage.xhtml"; // Redirect to success page
+    }
+
+    private boolean isValidDateOfBirth(Date date) {
+        try {
+            // Define your date format
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//            sdf.setLenient(false); // Set lenient to false to strictly check the date format
+
+            // Parsing the input date string
+            Date parsedDate = sdf.parse(sdf.format(date));
+
+            // Comparing the parsed date with the original date to ensure correctness
+            return parsedDate.equals(date);
+        } catch (ParseException e) {
+            return false;
+        }
+    }
+
+    private void addErrorMessage(String clientId, String message) {
+        FacesContext.getCurrentInstance().addMessage(clientId,
+                new FacesMessage(FacesMessage.SEVERITY_ERROR, message, null));
+    }
+
+    // Other methods, getters, and setters
+}

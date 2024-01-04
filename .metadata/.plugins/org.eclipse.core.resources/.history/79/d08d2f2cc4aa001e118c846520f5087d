@@ -1,0 +1,5 @@
+package com.java.jsf.BeanValidation;
+
+public class UserBean {
+
+}

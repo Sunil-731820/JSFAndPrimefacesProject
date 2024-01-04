@@ -1,0 +1,46 @@
+package com.java.jsf.BeanValidation.WithoutAnnotation;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
+
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+
+
+@ManagedBean
+@RequestScoped
+public class UserBean {
+	
+	@Size(min = 3,message = "Name Should Contains Atleast more Than 3 Character ")
+	private String name;
+	
+	@Pattern(regexp = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$", message = "This is not a valid email")
+	private String email;
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	@Override
+	public String toString() {
+		return "UserBean [name=" + name + ", email=" + email + "]";
+	}
+	
+	
+	
+	
+
+}

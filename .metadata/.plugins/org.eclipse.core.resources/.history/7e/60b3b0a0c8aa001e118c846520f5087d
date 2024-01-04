@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:sql_rt="http://java.sun.com/jstl/sql_rt">
+
+<h:body>
+	<h:form>
+	
+	<h:outputLabel value="First Name:">
+                <h:inputText label="First Name" id="username" value="#{userBean.username}" required="true" requiredMessage="first Name can not be EMpty ">
+                    <f:validateRequired />
+                </h:inputText>
+            </h:outputLabel>
+            <h:message for="username" style="color:red" />
+	
+		<br></br>
+		<h:outputLabel value="First Name:">
+                <h:inputText label="First Name" id="email" value="#{userBean.email}" required="true" requiredMessage="first Name can not be EMpty ">
+                    <f:validateRequired />
+                </h:inputText>
+            </h:outputLabel>
+            <h:message for="email" style="color:red" />
+	
+		<br></br>
+		
+		<h:outputLabel value="First Name:">
+                <h:inputText label="First Name" id="age" value="#{userBean.age}" required="true" requiredMessage="first Name can not be EMpty ">
+                    <f:validateRequired />
+                </h:inputText>
+            </h:outputLabel>
+            <h:message for="age" style="color:red" />
+	
+		<h:commandButton value="Submit" action="#{userBean.saveUser}" />
+	</h:form>
+
+</h:body>
+
+</html>
