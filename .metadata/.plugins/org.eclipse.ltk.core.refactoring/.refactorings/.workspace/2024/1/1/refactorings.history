@@ -1,4 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;EmployManagementSystemUsingJSF&apos;" deleteContents="false" description="Delete resource &apos;EmployManagementSystemUsingJSF&apos;" element1="/EmployManagementSystemUsingJSF" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1704257883630"/>
-</session>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;EmployManagementSystemUsingJSF&apos;" deleteContents="false" description="Delete resource &apos;EmployManagementSystemUsingJSF&apos;" element1="/EmployManagementSystemUsingJSF" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1704257883630"/>&#x0A;&#x0A;</session>

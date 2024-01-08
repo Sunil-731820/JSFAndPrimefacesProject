@@ -1,3 +1,4 @@
-GitRepositoriesView.GitDirectories=D\:\\AllJavaProject\\.git;
-GitRepositoriesView.GitDirectories.relative=D\:\\AllJavaProject\\.git;
+GitRepositoriesView.GitDirectories=D\:\\AllJavaProject\\.git;D\:\\JSFAndPrimefaceProject\\.git;
+GitRepositoriesView.GitDirectories.relative=D\:\\AllJavaProject\\.git;.git;
+core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
